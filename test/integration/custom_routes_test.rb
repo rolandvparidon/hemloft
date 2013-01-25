@@ -3,7 +3,7 @@ require 'test_helper'
 class CustomRoutesTest < ActionDispatch::IntegrationTest
   test "that /login route opens the login page" do 
   	get '/login'
-  	assert_response :succes
+  	assert_response :success
   end
 
  test "that /logout route opens the logout page" do 
@@ -14,6 +14,12 @@ class CustomRoutesTest < ActionDispatch::IntegrationTest
 
 test "that /register route opens the sign up page" do 
   	get '/register'
-  	assert_response :succes  end
+  	assert_response :success  
+  end
+
+  test "that a profile page works" do
+    get '/jasonseifer'
+    assert_response :success
+  end
 
 end
