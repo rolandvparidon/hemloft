@@ -25,5 +25,5 @@ require 'test_helper'
 		assert_equal users(:jason), status.user
 	end
 
-end
+	end
 end
